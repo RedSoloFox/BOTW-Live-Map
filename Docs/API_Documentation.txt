@@ -1,0 +1,12 @@
+[gecko_api]
+/api/coordinates/: json format, coordinate system
+
+    {"return_status": (0 or 1),
+     "coordinates":{
+        "x":"(cordinate or err)",
+        "y":"(coordinate or err)",
+        "z":"(coordinate or err)"
+        }
+     }
+
+/api/status/: json format

@@ -1,0 +1,29 @@
+# From botw-trainer
+
+var pointer = this.gecko.GetUInt(0x439C0794);
+                var address = pointer + 0x140;
+
+                Dispatcher.Invoke(
+                    () =>
+                    {
+                        run = this.connected && EnableCoords.IsChecked == true;
+                        CoordsAddress.Content = "0x" + address.ToString("x8").ToUpper() + " <- Memory Address";
+                    });
+
+                while (run)
+                {
+                    var coords = this.gecko.ReadBytes(address, 0xC);
+
+                    if (!coords.Any())
+                    {
+                        MessageBox.Show("No data found");
+                        break;
+                    }
+
+                    var x = coords.Take(4).Reverse().ToArray();
+                    var y = coords.Skip(4).Take(4).Reverse().ToArray();
+                    var z = coords.Skip(8).Take(4).Reverse().ToArray();
+
+                    var xFloat = BitConverter.ToSingle(x, 0);
+                    var yFloat = BitConverter.ToSingle(y, 0);
+                    var zFloat = BitConverter.ToSingle(z, 0);

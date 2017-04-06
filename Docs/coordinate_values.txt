@@ -1,0 +1,4 @@
+Values are stored in 3 bytes as floats.
+First coordinate is East and West. East heading negative while West is positive.
+Second coordinate is height. Up is positive and Down is negative.
+Third coordinate is North and South. North being negative and south being positive.

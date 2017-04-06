@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container-fluid" style="margin-bottom: 100%">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" style="margin-top: 10%">
+                    <form style="text-align: center" action="/api/connect/" method="post">
+                        <input class="form-control" type="text" name="ip">
+                        <input type="hidden" name="cord" value="connect">
+                        <button class="btn btn-default" type="submit">Connect</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

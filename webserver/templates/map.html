@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map">Map Here</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}"></script>
+    <script src="/static/js/map.js"/>
+    <script>$(document).ready(initMap())</script>
+{% endblock %}
