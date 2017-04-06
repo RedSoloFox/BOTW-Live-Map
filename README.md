@@ -5,6 +5,7 @@ Live map for The Legend of Zelda: Breath of the Wild
 * connect and disconnect (via API "/api/connect/")
 * coordinates get (via API "/api/coordinates/")
 * connect_required decorator
+* broke old repo
 
 ### To-Do
 1. Front End work
@@ -19,3 +20,4 @@ Live map for The Legend of Zelda: Breath of the Wild
 10. Add setting of coordinates
 11. Add cheats with full menu (Possibly Popout?)
 12. Make less of a mess.
+13. Don't break everything again.
