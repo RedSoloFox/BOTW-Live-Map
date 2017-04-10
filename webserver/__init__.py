@@ -4,17 +4,13 @@ from botwgecko import BOTWGecko
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
 
-# create object for later reassignment so it can be shared
+#BOTWGecko init
 bgecko = BOTWGecko()
 
-'''
-# for debug, will freeze on re-init by the debugger
-if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
-    bgecko = BOTWGecko(app.config["WIIUIP"])
-else:
-    bgecko = None
-'''
-
+# Import the other sections
 import webserver.utils
 import webserver.views
 import webserver.api
+
+if __name__ == '__main__':
+    app.run()

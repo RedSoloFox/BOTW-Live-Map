@@ -9,6 +9,6 @@ def connect_required(func):
         if bgecko.is_connected:
             return func(*args, **kwargs)
         flash("Please Connect")
-        return redirect('/')
+        return redirect('/connect/')
 
     return decorated_view

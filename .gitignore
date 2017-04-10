@@ -141,3 +141,4 @@ ENV/
 /.idea
 /webserver/static/img/BotW-Map-FULL.png
 /config.py
+/webserver/logs/

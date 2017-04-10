@@ -1,6 +1,8 @@
 from webserver import app, bgecko
-from flask import render_template, request, redirect, flash
+from flask import redirect
 
 @app.route('/', methods=["GET"])
 def index():
-    return render_template('index.html')
+    if bgecko.is_connected:
+        return redirect('/map/')
+    return redirect('/connect/')
