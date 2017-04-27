@@ -37,16 +37,11 @@ function stop_coord_loop() {
 
 function initMap() {
     console.log("init")
-    // set up the map
 	map = new L.Map('map');
+    L.tileLayer('/static/img/tiles/{z}/{x}/{y}.png', {minZoom: 3, maxZoom: 6, attribution: 'RedSoloFox'}).addTo(map);
 
-	// create the tile layer with correct attribution
-	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-	var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib});
-
-	// start the map in South-East England
-	map.setView(new L.LatLng(51.3, 0.7),9);
+    //Set center of screen ((lat, long), zoom)
+    map.setView(new L.LatLng(50, 50),0);
 	map.addLayer(osm);
 	console.log("Map initialized")
 }
