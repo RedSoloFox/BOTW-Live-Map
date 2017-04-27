@@ -35,13 +35,14 @@ function stop_coord_loop() {
     console.log('stop')
 }
 
+
 function initMap() {
-    console.log("init")
+    console.log("Start Map Init");
 	map = new L.Map('map');
-    L.tileLayer('/static/img/tiles/{z}/{x}/{y}.png', {minZoom: 3, maxZoom: 6, attribution: 'RedSoloFox'}).addTo(map);
+    L.tileLayer('/static/img/tiles/{z}/{x}/{y}.png', {minZoom: 2, maxZoom: 7, attribution: 'RedSoloFox'}).addTo(map);
 
     //Set center of screen ((lat, long), zoom)
-    map.setView(new L.LatLng(50, 50),0);
+    map.setView(new L.LatLng(50, -50),0);
 	map.addLayer(osm);
 	console.log("Map initialized")
 }

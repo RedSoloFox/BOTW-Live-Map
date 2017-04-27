@@ -142,3 +142,5 @@ ENV/
 /webserver/static/img/BotW-Map-FULL.png
 /config.py
 /webserver/logs/
+/webserver/static/img/tiles/
+/Resources/BotW-Map-FULL.png
