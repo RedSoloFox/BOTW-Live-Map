@@ -4,13 +4,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="coordinates">Map Here</div>
-                <button onclick="coord_loop()">Start</button>
-                <button onclick="stop_coord_loop()">Stop</button>
+                <button class="btn btn-default" onclick="update_Marker()">Update Marker</button>
+                <button class="btn btn-default" onclick="stop_update_loop()">Stop</button>
             </div>
             <div id="map"></div>
         </div>
     </div>
     <script src="/static/js/leaflet.js"></script>
+    <script src="/static/js/rastercoords.js"></script>
     <script src="/static/js/map.js"></script>
-    <script>document.onload = initMap()</script>
+    <script>
+    function start() {
+        initMap();
+        marker_update_loop()
+    }
+    document.onload = start()
+    </script>
 {% endblock %}

@@ -31,10 +31,6 @@
             if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
             else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
-        $(document).ready(function () {
-            var iframe_height = parseInt($('html').height());
-            window.parent.postMessage(iframe_height, 'http://bootsnipp.com');
-        });
     </script>
 
 </head>
@@ -57,7 +53,7 @@
             <li>
                 <a href="#">Events</a>
             </li>
-            {% if bgecko.is_authenticated %}
+            {% if bgecko["connected"] %}
                 <li>
                     <a href="#" onclick="gecko_disconnect()">Disconnect</a>
                 </li>

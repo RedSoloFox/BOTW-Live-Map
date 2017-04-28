@@ -2,3 +2,10 @@ Values are stored in 3 bytes as floats.
 First coordinate is East and West. East heading negative while West is positive.
 Second coordinate is height. Up is positive and Down is negative.
 Third coordinate is North and South. North being negative and south being positive.
+
+Units of the map seem to be roughly 10000 across and 8000 top to bottom. Split in half with 5000 being x=0 and 4000 being y=0
+
+x [-5000, 5000]
+y [-4000, 4000]
+
+Using the resolution of the image for leaflet is apparently necessary, [12000, 10000] is 0,0 on the coordinate system. >12000 is negative and >10000 is also negative
