@@ -48,6 +48,7 @@ function initMap() {
     // Create marker
     current_location = rest("/api/coordinates/")["coordinates"];
     loc = [parseFloat(current_location['x']), parseFloat(current_location['y'])];
+    console.log(current_location);
     playerMarker = L.marker(rc.unproject(loc), {icon: heartIcon}).addTo(map);
 
     console.log("Map initialized")

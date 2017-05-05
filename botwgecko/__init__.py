@@ -5,6 +5,7 @@ from botwgecko.tcpgecko import TCPGecko
 
 
 class BOTWGecko(TCPGecko):
+    #Make this into a config TODO
     coord_pointer = 0x439C0794
 
     def __init__(self):
@@ -31,6 +32,7 @@ class BOTWGecko(TCPGecko):
 
     def get_coord_address_from_pointer(self, address):
         pointer = self.readmem(address, 0x4)
+        print(address, struct.unpack(">L", pointer)[0] + 0x140)
         return struct.unpack(">L", pointer)[0] + 0x140
 
     def auto_coord_address(self):
@@ -39,7 +41,3 @@ class BOTWGecko(TCPGecko):
     def get_coordinates(self):
         coord = self.readmem(self.coord_address, 0xC)
         return struct.unpack(">3f", coord)
-
-if __name__ == "__main__":
-    gecko = BOTWGecko("192.168.0.101")
-    print(gecko.get_coordinates())
