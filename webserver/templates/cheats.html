@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div id="cheats_table">
+        <button onclick="set_health()">Set Health</button>
+        <input id="health_select" type="number" min="0" max="100">
+        <button onclick="get_health()">Get_Health</button>
+        <div id="show_health">Health</div>
+    </div>
+    <script src="/static/js/cheats.js"></script>
+{% endblock %}

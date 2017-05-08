@@ -1,5 +1,6 @@
-import struct, socket
-from botwgecko.tcpgecko import TCPGecko
+import struct
+from pygecko import TCPGecko
+# from botwgecko.mem_addresses import *
 
 # Wii U is Big endian (>)
 
@@ -9,22 +10,8 @@ class BOTWGecko(TCPGecko):
     coord_pointer = 0x439D89A4
 
     def __init__(self):
-        # overwrite __init__ so I don't have to auto-connect
-        print("BOTWGecko initialized")
-        self.is_connected = False
-
-    def connect(self, ip):
-        self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
-        print("Connecting to " + str(ip) + ":7331")
-        self.s.connect((str(ip), 7331))  # IP, 1337 reversed, Cafiine uses 7332+
-        print("Connected!")
-        self.is_connected = True
-
-    def disconnect(self):
-        print("Disconnecting")
-        self.s.close()
-        print("Disconnected")
-        self.is_connected = False
+        super().__init__()
+        print("BOTWGecko initialized!")
 
     def connect_and_get_coord_address(self, ip):
         self.connect(ip)
@@ -32,7 +19,6 @@ class BOTWGecko(TCPGecko):
 
     def get_coord_address_from_pointer(self, address):
         pointer = self.readmem(address, 0x4)
-        print(address, struct.unpack(">L", pointer)[0] + 0x140)
         return struct.unpack(">L", pointer)[0] + 0x140
 
     def auto_coord_address(self):
