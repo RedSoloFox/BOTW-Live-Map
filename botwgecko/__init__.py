@@ -6,7 +6,7 @@ from botwgecko.tcpgecko import TCPGecko
 
 class BOTWGecko(TCPGecko):
     #Make this into a config TODO
-    coord_pointer = 0x439C0794
+    coord_pointer = 0x439D89A4
 
     def __init__(self):
         # overwrite __init__ so I don't have to auto-connect
