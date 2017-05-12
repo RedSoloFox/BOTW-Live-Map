@@ -4,6 +4,6 @@ from flask import render_template
 
 
 @app.route('/cheats/')
-@connect_required
+#@connect_required
 def cheats():
     return render_template('cheats.html')
