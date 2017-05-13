@@ -100,40 +100,50 @@ function set_abilities() {
 
 function master_sword_powered_up(cb) {
     if (cb.checked) {
+        console.log('Set Master Sword Always Powered Up')
         // set
     } else {
+        console.log('Unset Master Sword Always Powered Up')
         // unset
     }
 }
 
 function master_sword_instant_recharge(cb) {
     if (cb.checked) {
+        console.log('Set Master Sword Instant Recharge')
         // set
     } else {
+        console.log('Unset Master Sword Instant Recharge')
         // unset
     }
 }
 
 function weapon_infinite_durability(cb) {
     if (cb.checked) {
+        console.log('Set Weapon Infinite Durability')
         // set
     } else {
+        console.log('Unset Weapon Infinite Durability')
         // unset
     }
 }
 
 function bow_infinite_durability(cb) {
     if (cb.checked) {
+        console.log('Set Bow Infinite Durability')
         // set
     } else {
+        console.log('Unset Bow Infinite Durability')
         // unset
     }
 }
 
 function shield_infinite_durability(cb) {
     if (cb.checked) {
+        console.log('Set Shield Infinite Durability')
         // set
     } else {
+        console.log('Unset Shield Infinite Durability')
         // unset
     }
 }

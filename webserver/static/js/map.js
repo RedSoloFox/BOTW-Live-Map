@@ -70,5 +70,5 @@ function marker_update_loop() {
 
 function stop_update_loop() {
     stopped = true;
-    console.log('stop')
+    console.log('stop');
 }
