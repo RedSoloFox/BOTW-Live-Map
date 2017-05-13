@@ -72,3 +72,37 @@ function stop_update_loop() {
     stopped = true;
     console.log('stop')
 }
+
+/* Check box logic goes here */
+
+function master_sword_powered_up(cb) {
+    if (cb.checked) {
+        // set master sword
+    } else {
+        // unset master sword
+    }
+}
+
+function master_sword_instant_recharge(cb) {
+    if (cb.checked) {
+        // set master sword
+    } else {
+        // unset master sword
+    }
+}
+
+function weapon_infinite_durability(cb) {
+    if (cb.checked) {
+        // set master sword
+    } else {
+        // unset master sword
+    }
+}
+
+function bow_infinite_durability(cb) {
+    if (cb.checked) {
+        // set master sword
+    } else {
+        // unset master sword
+    }
+}

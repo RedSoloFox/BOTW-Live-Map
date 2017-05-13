@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
-    <div id="cheats_table"></div>
+    <div id="currency_table"></div>
         <table class="table" style="text-align: center">
         <thead>
-            <tr>
+            <tr class="">
                 <td><h3>Health</h3></td>
                 <td><h3>Stamina</h3></td>
                 <td><h3>Rupees</h3></td>
@@ -30,6 +30,25 @@
                 <td><button onclick="set_mon()">Set</button></td>
             </tr>
         </tbody>
+        </table>
+        <hr>
+        <table class="table" style="text-align: center">
+            <thead>
+                <tr>
+                    <td>Master Sword Always Powered Up</td>
+                    <td>Master Sword Instant Recharge</td>
+                    <td>Weapon Infinite Durability</td>
+                    <td>Bow Infinite Durability</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" onchange="master_sword_powered_up(this)"></td>
+                    <td><input type="checkbox" onchange="master_sword_instant_recharge(this)"></td>
+                    <td><input type="checkbox" onchange="weapon_infinite_durability(this)"></td>
+                    <td><input type="checkbox" onchange="bow_infinite_durability(this)"></td>
+                </tr>
+            </tbody>
         </table>
     {#
     <div id="cheats_table">
