@@ -1,62 +1,54 @@
 {% extends "layout.html" %}
 {% block body %}
     <div id="currency_table"></div>
-        <table class="table" style="text-align: center">
+    <table class="table" style="text-align: center">
         <thead>
-            <tr class="">
-                <td><h3>Health</h3></td>
-                <td><h3>Stamina</h3></td>
-                <td><h3>Rupees</h3></td>
-                <td><h3>Mon</h3></td>
-            </tr>
+        <tr>
+            <td><h3>Health</h3></td>
+            <td><h3>Stamina</h3></td>
+            <td><h3>Rupees</h3></td>
+            <td><h3>Mon</h3></td>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td id="current_health">Current Health</td>
-                <td id="current_stamina">Current Stamina</td>
-                <td id="current_rupees">Current Rupees</td>
-                <td id="current_mon">Current Mon</td>
-            </tr>
-            <tr>
-                <td><input id="health_select" type="number" min="0" max="100" placeholder="1"></td>
-                <td><input id="stamina_select" type="number" min="0" max="999" placeholder="1"></td>
-                <td><input id="rupee_select" type="number" min="0" max="999" placeholder="1"></td>
-                <td><input id="mon_select" type="number" min="0" max="999" placeholder="1"></td>
-            </tr>
-            <tr>
-                <td><button onclick="set_health()">Set</button></td>
-                <td><button onclick="set_stamina()">Set</button></td>
-                <td><button onclick="set_rupees()">Set</button></td>
-                <td><button onclick="set_mon()">Set</button></td>
-            </tr>
+        <tr>
+            <td id="current_health">Current Health</td>
+            <td id="current_stamina">Current Stamina</td>
+            <td id="current_rupees">Current Rupees</td>
+            <td id="current_mon">Current Mon</td>
+        </tr>
+        <tr>
+            <td><input id="health_select" type="number" min="0" max="100" placeholder="1"></td>
+            <td><input id="stamina_select" type="number" min="0" max="999" placeholder="1"></td>
+            <td><input id="rupee_select" type="number" min="0" max="999" placeholder="1"></td>
+            <td><input id="mon_select" type="number" min="0" max="999" placeholder="1"></td>
+        </tr>
+        <tr>
+            <td><button onclick="set_health()">Set</button></td>
+            <td><button onclick="set_stamina()">Set</button></td>
+            <td><button onclick="set_rupees()">Set</button></td>
+            <td><button onclick="set_mon()">Set</button></td>
+        </tr>
         </tbody>
-        </table>
-        <hr>
-        <table class="table" style="text-align: center">
-            <thead>
-                <tr>
-                    <td>Master Sword Always Powered Up</td>
-                    <td>Master Sword Instant Recharge</td>
-                    <td>Weapon Infinite Durability</td>
-                    <td>Bow Infinite Durability</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox" onchange="master_sword_powered_up(this)"></td>
-                    <td><input type="checkbox" onchange="master_sword_instant_recharge(this)"></td>
-                    <td><input type="checkbox" onchange="weapon_infinite_durability(this)"></td>
-                    <td><input type="checkbox" onchange="bow_infinite_durability(this)"></td>
-                </tr>
-            </tbody>
-        </table>
-    {#
-    <div id="cheats_table">
-        <button onclick="set_health()">Set Health</button>
-        <input id="health_select" type="number" min="0" max="100">
-        <button onclick="get_health()">Get_Health</button>
-        <div id="show_health">Health</div>
-    </div>
-    #}
+    </table>
+    <hr>
+    <table class="table" style="text-align: center">
+        <thead>
+        <tr>
+            <td>Master Sword Always Powered Up</td>
+            <td>Master Sword Instant Recharge</td>
+            <td>Weapon Infinite Durability</td>
+            <td>Bow Infinite Durability</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox" onchange="master_sword_powered_up(this)"></td>
+            <td><input type="checkbox" onchange="master_sword_instant_recharge(this)"></td>
+            <td><input type="checkbox" onchange="weapon_infinite_durability(this)"></td>
+            <td><input type="checkbox" onchange="bow_infinite_durability(this)"></td>
+        </tr>
+        </tbody>
+    </table>
     <script src="/static/js/cheats.js"></script>
 {% endblock %}

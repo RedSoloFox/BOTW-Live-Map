@@ -95,3 +95,45 @@ function set_abilities() {
     console.log('set_abilities');
     // set abilities
 }
+
+/* Check box logic goes here */
+
+function master_sword_powered_up(cb) {
+    if (cb.checked) {
+        // set
+    } else {
+        // unset
+    }
+}
+
+function master_sword_instant_recharge(cb) {
+    if (cb.checked) {
+        // set
+    } else {
+        // unset
+    }
+}
+
+function weapon_infinite_durability(cb) {
+    if (cb.checked) {
+        // set
+    } else {
+        // unset
+    }
+}
+
+function bow_infinite_durability(cb) {
+    if (cb.checked) {
+        // set
+    } else {
+        // unset
+    }
+}
+
+function shield_infinite_durability(cb) {
+    if (cb.checked) {
+        // set
+    } else {
+        // unset
+    }
+}
